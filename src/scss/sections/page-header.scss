@@ -1,0 +1,57 @@
+.page-header {
+  padding: 47px 0;
+}
+
+.page-header__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__logo {
+  // Пока не требуется
+}
+
+.page-header__nav {
+ display: none;
+}
+
+.page-header__menu-btn {
+  position: absolute;
+  right: 47px - 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 45px;
+  height: 45px;
+  background: none;
+  border: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #EAE5E5;
+    transition: 0.3s;
+  }
+
+  &::before {
+    top: 13px;
+  }
+
+  &::after {
+    bottom: 14px;
+  }
+
+  &:hover::before {
+    transform: translateY(-5px);
+  }
+
+  &:hover::after {
+    transform: translateY(5px);
+  }
+}

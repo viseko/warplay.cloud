@@ -9,7 +9,8 @@
 @import "layout";
 
 // Общие блоки
-// @import "blocks/name"
+@import "blocks/logo";
+@import "blocks/nav-main";
 
 // Секции главной страницы
 @import "sections/page-header";

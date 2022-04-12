@@ -7,10 +7,17 @@ mixin navItem(targetPage, text)
       a(href=href).nav-main__link #{text}
 
 header.page__header.page-header
-  .page-header__container
+  .page__container.page-header__container
     .logo.page-header__logo
       include logo-svg
     nav.page-header__nav.nav-main
       ul.nav-main__list
         +navItem("index", "Главная")
         +navItem("#", "Сервера")
+        +navItem("download", "Скачать")
+        +navItem("#", "Открыть в браузере")
+        +navItem("#", "Цены")
+        +navItem("#", "Тех поддержка")
+        +navItem("contacts", "Контакты")
+    button.page-header__menu-btn.menu-btn
+      span.visually-hidden Меню
