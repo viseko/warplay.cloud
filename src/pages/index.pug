@@ -1,0 +1,20 @@
+extends common/layout
+
+block config
+  - var page = "index"
+  - var title = "Warplay.Cloud – преврати своё устройство в игровое"
+
+block content
+  //- HEADER
+  include common/header
+  //- CONTENT
+  .page__container
+    include sections/promo
+    .page__section-group
+      include sections/about
+      include sections/quickstart
+      include sections/tariffs
+    include sections/devices
+    include sections/map
+  //- FOOTER
+  include common/footer

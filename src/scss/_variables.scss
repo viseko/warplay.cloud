@@ -1,0 +1,38 @@
+// Используемая палитра
+$cl-white: #FFF;
+$cl-black: #000;
+$cl-bg: #141C24; // фон
+$cl-blue: #57D6FF; // лого, заголовки
+
+$cl-link: #00C5FF; // подводка навигации, ссылки
+$cl-text-main: #ABABAB; // как это работает, тарифы, подтверждение
+$cl-text-alt: #F1F1F1; // быстрый старт
+
+$cl-logo-main: #ECECEC;
+$cl-logo-alt: #E0E0E0;
+
+$cl-footer-bg: #171717;
+$cl-footer-design: #838383;
+$cl-socials: #D9D9D9;
+$cl-vk-continue-bg: #287DDF;
+
+// Фон и цвет текста
+$g-bg-color: $cl-bg;
+$g-text-color: $cl-text-main;
+
+// Шрифт по умолчанию
+$g-font-size: 16px;
+$g-font: "Roboto", Arial, sans-serif;
+$g-line-height: unset;
+
+// Макс. ширина контейнера
+$container-width: 1327px;
+
+// Разрешения
+$desktop-sm: 1150px;
+$tablet: 800px;
+$mobile: 425px;
+
+// Retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
