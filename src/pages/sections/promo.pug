@@ -1,0 +1,31 @@
+mixin promoSlide(name)
+  .promo__slider-slide.swiper-slide
+    img(
+      src=`img/main-slider/${name}.jpg`,
+      srcset=`@img/main-slider/${name}@2x.jpg 2x`,
+      alt="Сервис облачного гейминга Warplay Cloud")
+
+section.promo
+  .promo__decor-line.promo__decor-line--top
+  .promo__decor-line.promo__decor-line--bottom
+
+  .promo__center
+    .promo__decor-line.promo__decor-line--right
+    .promo__content
+      .promo__text
+        h1.promo__title
+          | Сервис облачного гейминга
+          span.visually-hidden Warplay Cloud
+        p.promo__slogan Преврати свое устройство в игровое
+      +btnEdge({
+        href: "#",
+        className: "promo-btn",
+        text: "Upgrade"
+      })
+
+    .promo__slider.swiper.js-promo-slider
+      .swiper-wrapper
+        +promoSlide("bg1")
+        +promoSlide("bg2")
+        +promoSlide("bg3")
+        +promoSlide("bg4")

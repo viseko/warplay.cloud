@@ -1,0 +1,21 @@
+.btn-edge {
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    height: 100%;
+  }
+
+  path{
+    fill: $cl-white;
+    transition: 0.3s;
+  }
+}

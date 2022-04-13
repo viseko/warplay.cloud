@@ -4,3 +4,10 @@ mixin svgSprite(name, width, height)
     height= height
   )
     use(xlink:href= "img/icons/icons.svg#" + name)
+
+mixin btnEdge(options)
+  - var {href, className, text} = options;
+  a(href=href, class=className).btn-edge
+    span #{text}
+    svg(width='251', height='61', fill='none', xmlns='http://www.w3.org/2000/svg')
+      path(d='M0 0h230.997L251 22.512V61H0V0Z')

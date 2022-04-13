@@ -1,0 +1,151 @@
+.promo {
+  position: relative;
+  padding: 26px 20px 97px;
+  height: 100vh;
+  min-height: 680px;
+}
+
+.promo__center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 80px 0px $cl-blue;
+}
+
+.promo__content {
+  z-index: 2;
+  padding-top: 160px;
+}
+
+.promo__text {
+  color: $cl-white;
+  text-align: center;
+}
+
+.promo__title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.promo__slogan {
+  font-family: "AireExterior";
+  font-size: 48px;
+  margin-bottom: 131px;
+}
+
+.promo-btn {
+  display: block;
+  margin: auto;
+  width: 251px;
+  padding: 19px 0 18px;
+  color: $cl-black;
+  font-family: "AireExterior";
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover path {
+    fill: $cl-link;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.promo__slider {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  z-index: 1;
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
+
+  img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Decorations
+.promo__decor-line {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  width: 1px;
+  background-color: $cl-white;
+}
+
+.promo__decor-line--top {
+  top: 42px;
+  left: 50%;
+  height: 77px;
+}
+
+.promo__decor-line--bottom {
+  bottom: 0;
+  left: 50%;
+  height: 19.77vh;
+}
+
+.promo__decor-line--right {
+  height: 78%;
+  right: 67px;
+  top: 16%;
+}
+
+@media (max-width: 875px) {
+  .promo__decor-line--right {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .promo {
+    padding: 0 0 66px;
+  }
+
+  .promo__center {
+    height: 100%;
+    padding: 0 38px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: none;
+  }
+
+  .promo__content {
+    padding-top: 200px;
+    padding-bottom: 94px;
+  }
+
+  .promo__text {
+    text-align: left;
+  }
+
+  .promo__title {
+    width: 150px;
+    margin-bottom: 11px;
+  }
+
+  .promo__slogan {
+    margin-bottom: 137px;
+  }
+
+  .promo__decor-line--top {
+    display: none;
+  }
+
+  .promo__decor-line--bottom {
+    height: 15.6%
+  }
+}

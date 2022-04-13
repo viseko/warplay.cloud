@@ -36,3 +36,14 @@ let isMenuOpened = false;
 // };
 
 // ** ОСТАЛЬНЫЕ СКРИПТЫ
+// Промо-слайдер
+if (Swiper) {
+  new Swiper(".js-promo-slider", {
+    effect: "fade",
+    loop: true,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 5000
+    }
+  })
+}
