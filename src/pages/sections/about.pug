@@ -1,16 +1,19 @@
 section.section.about
-  .section__info.section__info--right
+  .section__liquid-block
+      figure.about__image(data-am=".about__image-small / (max-width: 1100px)")
+        img(
+          width="337",
+          height="194",
+          src="@img/ImageServerHost.png",
+          srcset="@img/ImageServerHost@2x.png 2x",
+          alt="Схема облачного гейминга")
+
+  .section__info.about__info
     h2.section__title Облачный гейминг
     b.section__bold Как это работает
     p Наши сервера запускают игру, и передают вам картинку, которой вы можете управлять в реальном времени!
-    figure.about__image
-      img(
-        width="337",
-        height="194",
-        src="@img/ImageServerHost.png",
-        srcset="@img/ImageServerHost@2x.png 2x",
-        alt="Схема облачного гейминга")
     hr
+    .about__image-small
     p Приложение  запустится на ПК с процессором от 1.5 GHz , от 1 Gb RAM и доступом в интернет от 15 мбит/с на всех операционых системах Windows 7, 8, 10 MacOS и Linux.
-    .section__link
-      a(href="#") Загрузить
+    .section__bottom
+      a(href="#").section__link Загрузить

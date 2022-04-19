@@ -1,18 +1,40 @@
 .about {
   position: relative;
+  align-items: center;
+}
+
+.about__info {
+  margin-right: 27px;
 }
 
 .about__image {
-  position: absolute;
-  left: 35px;
-  top: 0;
-  // width: 664px;
-  width: calc(100% - 35px - 500px - 70px);
-  height: 383px;
+  width: 100%;
+  margin-left: -18px;
+  padding-right: 46px;
 
   img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+  }
+}
+
+@media (max-width: $desktop-sm) {
+  .about__image {
+    position: relative;
+    margin: 0 -15px;
+    margin-bottom: 28px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .about__image img {
+    max-width: 400px;
+  }
+
+  .about__info {
+    margin-right: 0;
+  }
+
+  .about__info hr {
+    display: none;
   }
 }
