@@ -1,0 +1,71 @@
+.section {
+  display: flex;
+  padding: 42px 53px 90px;
+}
+
+.section__title {
+  position: relative;
+  padding-left: 84px;
+  margin-bottom: 17px;
+  color: $cl-blue;
+  font-weight: 300;
+  line-height: 180%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: $cl-blue;
+  }
+}
+
+.section__bold {
+  display: block;
+  margin-bottom: 60px;
+  color: $cl-white;
+  font-family: "AireExterior";
+  font-size: 39px;
+  font-weight: normal;
+}
+
+.section__info {
+  max-width: 500px;
+
+  p {
+    margin-bottom: 27px;
+    font-weight: 300;
+    font-size: 21.33px;
+    line-height: 150%;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  hr {
+    display: block;
+    max-width: 271px;
+    height: 0.5px;
+    margin: 0;
+    margin-bottom: 27px;
+    background-color: rgba(#FFFFFF, 0.2);
+    border: 0;
+  }
+}
+
+.section__info--right {
+  margin-left: auto;
+  padding-right: 27px;
+}
+
+.section__link {
+  position: relative;
+  padding-top: 60px;
+  display: inline-block;
+  color: $cl-link;
+  font-weight: 500;
+}

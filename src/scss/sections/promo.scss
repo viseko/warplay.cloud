@@ -109,7 +109,7 @@
 }
 
 .promo__decor-line--top {
-  top: 42px;
+  top: 100px;
   left: 50%;
   height: 77px;
 
@@ -122,6 +122,8 @@
   bottom: 0;
   left: 50%;
   height: 19.77vh;
+  max-height: 132px;
+  transform: rotate(180deg);
 
   &::after {
     animation: move-down 7s linear 5s infinite normal none;
