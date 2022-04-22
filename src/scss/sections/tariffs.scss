@@ -1,0 +1,134 @@
+.tariffs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 90px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 582px;
+    height: 1px;
+    background-color: $cl-link;
+  }
+}
+
+.tariffs__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.tariffs__item {
+  display: flex;
+  flex-direction: column;
+  padding: 76px 47px 47px 47px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  max-width: 400px;
+  color: $cl-white;
+  background-color: $cl-taririff-card;
+  border-radius: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.tariffs__item--accent {
+  color: $cl-black;
+  background-color: $cl-link;
+}
+
+.tariffs__title {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 100%;
+}
+
+.tariffs__price {
+  display: block;
+  margin-bottom: 21px;
+  font-size: 24px;
+}
+
+.tariffs__features {
+  margin-bottom: 60px;
+  color: $cl-text-main;
+  font-size: 21px;
+  line-height: 150%;
+
+  .tariffs__item--accent & {
+    color: $cl-black;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.tariffs__btn {
+  margin-top: auto;
+  padding: 15px;
+  color: $cl-black;
+  font-family: "AireExterior", "Arial Black";
+  font-size: 24px;
+  background-color: $cl-link;
+  border: 0;
+  border-radius: 5px;
+  transition: 0.1s;
+
+  &:hover {
+    background-color: $cl-white;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  .tariffs__item--accent & {
+    color: $cl-white;
+    background-color: $cl-black;
+  }
+
+  .tariffs__item--accent &:hover {
+    background-color: $cl-taririff-card;
+  }
+}
+
+@media (max-width: 1342px) {
+  .tariffs__item--accent {
+    order: 1;
+  }
+}
+
+@media (max-width: 933px) {
+  .tariffs {
+    padding-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .tariffs__item--accent {
+    order: 0;
+  }
+}
+
