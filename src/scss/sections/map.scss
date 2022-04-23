@@ -1,0 +1,87 @@
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map__image {
+  position: relative;
+  width: 722px;
+  height: 394px;
+}
+
+.map__profile {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/map/map.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.map__mark {
+  position: absolute;
+  bottom: 12.5%;
+  left: 26.84563758%;
+  width: 170px;
+  height: 100px;
+  background-image: url("../img/map/mark.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.map__mark-mask {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.map__label {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  padding-bottom: 18px;
+  padding-left: 45px;
+  color: $cl-white;
+  font-family: "AireExterior", "Arial Black";
+  font-size: 20px;
+  transition: 0.3s;
+  opacity: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1em;
+    left: 40px;
+    transform-origin: top left;
+    transform: rotate(155deg);
+    width: 127px;
+    height: 1px;
+    background-color: $cl-white;
+  }
+}
+
+.map__mark-mask:hover + .map__label,
+.map__mark-mask:focus + .map__label {
+  opacity: 1;
+}
+
+@media (max-width: 750px) {
+  .map__image {
+    position: relative;
+    width: 382px;
+    height: 245px;
+  }
+
+  .map__mark {
+    bottom: 10%;
+    left: 17%;
+  }
+
+  .map__title {
+    margin-left: 43px;
+  }
+}
