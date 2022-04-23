@@ -23,3 +23,13 @@
   width: 100%;
   max-width: $container-width + 40px;
 }
+
+.page__section-group {
+  border-left: 1px solid rgba($cl-white, 0.15);
+}
+
+@media (max-width: $desktop-sm) {
+  .page__section-group {
+    border-left: 0;
+  }
+}
