@@ -1,0 +1,61 @@
+.devices {
+  // Пока не требуется
+}
+
+.devices__info {
+  padding-top: 17px;
+  padding-left: 27px;
+}
+
+.devices__image-block {
+  position: relative;
+}
+
+.devices__image {
+  width: calc(50vw + 120px);
+  max-width: 1200px;
+  aspect-ratio: 800 / 740;
+  background-image: url("../img/ImageBrowser@2x.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 120%;
+}
+
+.devices__image-mobile {
+  display: none;
+}
+
+@media (max-width: $desktop-sm) {
+  .devices {
+    flex-direction: row;
+  }
+
+  .devices__info {
+    width: 480px;
+  }
+}
+
+@media (max-width: 900px) {
+  .devices {
+    flex-direction: column;
+  }
+
+  .devices__info {
+    width: 100%;
+  }
+
+  .devices__image-block {
+    display: none;
+  }
+
+  .devices__image-mobile {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: $mobile) {
+  .devices__info {
+    padding-left: 0;
+  }
+}
