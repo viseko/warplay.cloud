@@ -1,0 +1,19 @@
+section.mobile-menu
+  header.mobile-menu__header
+    include ../common/logo-svg
+  .mobile-menu__nav-wrapper
+  footer.mobile-menu__footer
+    .mobile-menu__socials
+      .socials
+        a(href="#").socials__link
+          +svgSprite("vk", 17, 17)
+          span.visually-hidden VK
+        a(href="#").socials__link
+          +svgSprite("discord", 17, 17)
+          span.visually-hidden Discord
+        a(href="#").socials__link
+          +svgSprite("youtube", 17, 17)
+          span.visually-hidden YouTube
+    .mobile-menu__bottom
+      button.mobile-menu__btn-close.js-menu-close
+        +svgSprite("arrow-back", 35, 35)

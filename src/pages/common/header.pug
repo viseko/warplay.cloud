@@ -1,5 +1,5 @@
 mixin navItem(targetPage, text)
-  li.nav-main__item
+  li.nav-main__item.mobile-menu__nav-item
     if (targetPage === page)
       span.nav-main__link.nav-main__link--active #{text}
     else
@@ -10,8 +10,8 @@ header.page__header.page-header.js-page-header
   .page__container.page-header__container
     .logo.page-header__logo
       include logo-svg
-    nav.page-header__nav.nav-main
-      ul.nav-main__list
+    nav.page-header__nav.nav-main.mobile-menu__nav(data-am=".mobile-menu__nav-wrapper / (max-width: 1100px)")
+      ul.nav-main__list.mobile-menu__nav-list
         +navItem("index", "Главная")
         +navItem("#", "Сервера")
         +navItem("download", "Скачать")
@@ -19,5 +19,5 @@ header.page__header.page-header.js-page-header
         +navItem("#", "Цены")
         +navItem("#", "Тех поддержка")
         +navItem("contacts", "Контакты")
-    button.page-header__menu-btn.menu-btn
+    button.page-header__menu-btn.js-menu-btn
       span.visually-hidden Меню
