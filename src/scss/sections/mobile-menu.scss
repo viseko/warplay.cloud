@@ -26,8 +26,6 @@
 
   .mobile-menu__nav-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-grow: 1;
     min-height: 200px;
     overflow-y: auto;
@@ -35,7 +33,7 @@
 
   .mobile-menu__nav {
     display: block;
-    margin-right: 0;
+    margin: auto;
   }
 
   .mobile-menu__nav-list {
