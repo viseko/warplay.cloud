@@ -1,5 +1,5 @@
 .page-header {
-  padding: 47px 0;
+  padding: 60px 0;
 }
 
 .page-header__container {
@@ -7,51 +7,108 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 75px;
 }
 
 .page-header__logo {
-  // Пока не требуется
+  margin-right: 20px;
 }
 
 .page-header__nav {
- display: none;
+  margin-right: -40px;
 }
 
 .page-header__menu-btn {
-  position: absolute;
-  right: 47px - 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: block;
-  width: 45px;
-  height: 45px;
-  background: none;
-  border: 0;
+  display: none;
+}
 
-  &::before,
-  &::after {
-    content: "";
+@media (max-width: $desktop-sm) {
+  .page-header__nav {
+    display: none;
+  }
+
+  .page-header__menu-btn {
     position: absolute;
+    right: 65px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: 45px;
+    height: 45px;
+    background: none;
+    border: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #EAE5E5;
+      transition: 0.3s;
+    }
+
+    &::before {
+      top: 13px;
+    }
+
+    &::after {
+      bottom: 14px;
+    }
+
+    &:hover::before {
+      transform: translateY(-5px);
+    }
+
+    &:hover::after {
+      transform: translateY(5px);
+    }
+  }
+}
+
+@media (min-width: $mobile + 1px) {
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  .page-header--fixed {
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #EAE5E5;
-    transition: 0.3s;
+    padding: 20px 0;
+    background-color: $cl-bg;
+    animation: slide-down 0.3s;
+
+    .page-header__container {
+      padding: 0 56px;
+    }
+
+    .page-header__logo path {
+      fill: $cl-link;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-header {
+    padding: 40px 0;
   }
 
-  &::before {
-    top: 13px;
+  .page-header__container {
+    justify-content: center;
   }
 
-  &::after {
-    bottom: 14px;
-  }
-
-  &:hover::before {
-    transform: translateY(-5px);
-  }
-
-  &:hover::after {
-    transform: translateY(5px);
+  .page-header__menu-btn {
+    position: fixed;
+    top: unset;
+    right: 20px;
+    bottom: 0px;
   }
 }

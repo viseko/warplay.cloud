@@ -6,7 +6,7 @@ mixin navItem(targetPage, text)
       - var href = (targetPage === "#") ? "#" : `${page}.html`
       a(href=href).nav-main__link #{text}
 
-header.page__header.page-header
+header.page__header.page-header.js-page-header
   .page__container.page-header__container
     .logo.page-header__logo
       include logo-svg

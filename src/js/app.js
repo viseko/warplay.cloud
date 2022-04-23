@@ -47,3 +47,17 @@ if (Swiper) {
     }
   })
 }
+
+// Фиксация хедера при прокрутке
+document.addEventListener("scroll", () => {
+  const header = document.querySelector(".js-page-header");
+  const firstSection = document.querySelector(".js-first-section");
+
+  const firstSectionHeight = firstSection.offsetHeight;
+
+  if (window.scrollY > firstSectionHeight) {
+    header.classList.add("page-header--fixed");
+  } else {
+    header.classList.remove("page-header--fixed");
+  }
+})
