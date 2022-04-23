@@ -1,2 +1,24 @@
-footer.page__footer.page-footer
-  .container
+footer.page-footer
+  .page__container.page-footer__container
+    .page-footer__col.page-footer__col--main
+      .logo.page-footer__logo
+        include logo-svg
+      .page-footer__copyrights
+        p.page-footer__rights 2022. All rights reserved.
+        p.page-footer__designer
+          | Design by desart
+          +svgSprite("arrow-left", 8, 8)
+    .page-footer__col.page-footer__col--links
+      .page-footer__links
+        a(href="#").page-footer__link Политика конфиденциальности
+        a(href="#").page-footer__link Файлы&nbsp;Cookie
+      .page-footer__socials.socials
+        a(href="#").socials__link
+          +svgSprite("vk", 17, 17)
+          span.visually-hidden VK
+        a(href="#").socials__link
+          +svgSprite("discord", 17, 17)
+          span.visually-hidden Discord
+        a(href="#").socials__link
+          +svgSprite("youtube", 17, 17)
+          span.visually-hidden YouTube
