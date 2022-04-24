@@ -1,9 +1,5 @@
 @media (max-width: $desktop-sm) {
   .mobile-menu {
-    display: none;
-  }
-
-  ._menu-open .mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,6 +11,14 @@
     padding: 0 30px;
     overflow: auto;
     background-color: $cl-bg;
+    transition: 0.3s;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  ._menu-open .mobile-menu {
+    pointer-events: all;
+    opacity: 1;
   }
 
   .mobile-menu__header {
