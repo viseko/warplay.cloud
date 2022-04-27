@@ -1371,21 +1371,17 @@ p {
   display: none;
 }
 
-.quickstart__step--create {
-  background-image: url("../img/icons-steps/create.png");
-}
+.no-webp .quickstart__step--create {
+  background-image: url("../img/icons-steps/create.png"); }
 
-.quickstart__step--download {
-  background-image: url("../img/icons-steps/download.png");
-}
+.no-webp .quickstart__step--download {
+  background-image: url("../img/icons-steps/download.png"); }
 
-.quickstart__step--tariff {
-  background-image: url("../img/icons-steps/tariff.png");
-}
+.no-webp .quickstart__step--tariff {
+  background-image: url("../img/icons-steps/tariff.png"); }
 
-.quickstart__step--play {
-  background-image: url("../img/icons-steps/play.png");
-}
+.no-webp .quickstart__step--play {
+  background-image: url("../img/icons-steps/play.png"); }
 
 @media (max-width: 1100px) {
   .quickstart__steps {
@@ -1563,11 +1559,13 @@ p {
   position: relative;
 }
 
+.no-webp .devices__image {
+  background-image: url("../img/ImageBrowser@2x.png"); }
+
 .devices__image {
   width: calc(50vw + 120px);
   max-width: 1200px;
   aspect-ratio: 800/740;
-  background-image: url("../img/ImageBrowser@2x.png");
   background-position: top left;
   background-repeat: no-repeat;
   background-size: 120%;
@@ -1621,13 +1619,18 @@ p {
   height: 394px;
 }
 
+.no-webp .map__profile {
+  background-image: url("../img/map/map.png"); }
+
 .map__profile {
   width: 100%;
   height: 100%;
-  background-image: url("../img/map/map.png");
   background-position: center;
   background-size: cover;
 }
+
+.no-webp .map__mark {
+  background-image: url("../img/map/mark.png"); }
 
 .map__mark {
   position: absolute;
@@ -1635,7 +1638,6 @@ p {
   left: 26.84563758%;
   width: 170px;
   height: 100px;
-  background-image: url("../img/map/mark.png");
   background-position: center;
   background-size: cover;
 }
@@ -1695,3 +1697,17 @@ p {
     margin-left: 43px;
   }
 }
+
+.webp .quickstart__step--create { background-image: url(../img/icons-steps/create.webp); }
+
+.webp .quickstart__step--download { background-image: url(../img/icons-steps/download.webp); }
+
+.webp .quickstart__step--tariff { background-image: url(../img/icons-steps/tariff.webp); }
+
+.webp .quickstart__step--play { background-image: url(../img/icons-steps/play.webp); }
+
+.webp .devices__image { background-image: url(../img/ImageBrowser@2x.webp); }
+
+.webp .map__profile { background-image: url(../img/map/map.webp); }
+
+.webp .map__mark { background-image: url(../img/map/mark.webp); }
